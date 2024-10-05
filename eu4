@@ -1,0 +1,31 @@
+-Crusader2010
+
+Now here's what I did that seemed to fix it for me (on Windows 10):
+
+  Right click on the "Documents" (My Documents) folder in any file explorer and then on Properties;
+
+  Go to the Security tab and click on Advanced; this is where the fun part begins!
+
+  Click on "Disable inheritance" and then on "Convert inherited permissions into explicit permissions on this object";
+
+  Click Apply; DO NOT click OK yet;
+
+  Take note of the "Owner", on the top second row of that window. It's usually the user with which you log into your computer every time. Click on "Change", type "Administrators" in the window that appears, then click OK;
+
+  Make sure the change is propagated to all the child/subfolders of "Documents" by checking the "Replace owner on subcontainers and objects" box;
+
+  Click Apply, then click OK;
+
+  Now you are back to the folder's properties, in the Security tab. Under "Group or user names", click on some of them, then click EDIT. Make sure that [your user], "Administrators" and "System" have the "FULL CONTROL" box checked (click Apply then OK after setting it);
+
+  Edit the EU4 desktop shortcut's properties and make sure it always runs as an administrator;
+
+  Go to the install folder (right click -> "Open file location" on the shortcut) of the EU4's executable, right click on it, go to Properties, and make sure it runs in compatibility mode for Windows7 and "Run as an administrator" is checked.
+  
+Followup:
+
+  Just for the sake of it, check that the "Paradox Interactive" subfolder of "Documents" had the permissions set properly (and the game's folder from it too, like "Europa Universalis IV" etc).
+
+  Right click on the "Paradox Interactive" subfolder, click on Properties, then uncheck the "Readonly". Click on Apply, then "Apply changes to this folder, subfolder and files", then click OK (on both windows). This step shouldn't really be needed, but I did it anyway, so you should too :)
+
+  Hopefully all of your "Access violation" errors will be gone now.
